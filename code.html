@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="code.css">
+</head>
+<body>
+    <header class="bg-dark text-white">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">Travel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuChinh">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuChinh">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Về chúng tôi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tour trong nước</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tour nước ngoài</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-outline-light" href="#modalDangNhap" data-bs-toggle="modal">Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner text-center text-white">
+        <div class="container">
+            <h1>Đến với MIỀN TÂY</h1>
+            <p>Giá chỉ từ 2.900.000đ - Từ 2/10 - 30/10</p>
+            <form class="row g-3 justify-content-center">
+                <div class="col-md-4">
+                    <select class="form-select" aria-label="Chọn loại hình tour">
+                        <option selected>Chọn loại hình tour</option>
+                        <option value="1">Tour gia đình</option>
+                        <option value="2">Tour nhóm</option>
+                        <option value="3">Tour cá nhân</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select" aria-label="Chọn nơi đến">
+                        <option selected>Chọn nơi đến</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Đà Lạt</option>
+                        <option value="3">Phú Quốc</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success w-100">Tìm kiếm ngay</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="ly-do text-center py-5">
+        <div class="container">
+            <h2>Hãy chọn Travel</h2>
+            <p>1.000 lý do tại sao bạn nên chọn đến với chúng tôi TravelGo.</p>
+            <p>Với hơn 16 năm kinh nghiệm tổ chức và triển khai các tour du lịch...</p>
+        </div>
+    </section>
+
+    <section class="gia-tot py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">GIÁ TỐT</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/dalat1.jpg" class="card-img-top" alt="Đà Lạt">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Đà Lạt</h5>
+                            <p class="card-text">Đà Lạt mộng mơ - Nha Trang biển xanh</p>
+                            <p class="gia">1.800.000đ</p>
+                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/phuquoc1.jpg" class="card-img-top" alt="Phú Quốc">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Phú Quốc</h5>
+                            <p class="card-text">Phú Quốc - Thiền viện Trúc Lâm</p>
+                            <p class="gia">2.500.000đ</p>
+                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/cantho1.jpg" class="card-img-top" alt="Cần Thơ">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Cần Thơ</h5>
+                            <p class="card-text">Hà Nội - Cần Thơ - Thiền viện Phương Nam</p>
+                            <p class="gia">2.900.000đ</p>
+                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="img/nhatrang1.jpg" class="card-img-top" alt="Nha Trang">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Nha Trang</h5>
+                            <p class="card-text">Nha Trang - Hòn Mun - Vinpearl</p>
+                            <p class="gia">6.500.000đ</p>
+                            <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <div class="modal fade" id="modalDangNhap" tabindex="-1" aria-labelledby="dangNhapLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dangNhapLabel">Đăng Nhập</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Nhập email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Đăng Nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

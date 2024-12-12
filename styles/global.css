@@ -1,0 +1,13 @@
+.breadcrumb {
+    background-color: #f6f6f6;
+    height: 52px;
+    padding: 14px;
+}
+.breadcrumb-item a {
+    color: #636363;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #8dc700;
+}

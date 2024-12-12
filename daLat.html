@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles/global.css" rel="stylesheet">
+    <link href="./styles/detail.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="./script/detail.page.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  -->
+    <header class="bg-dark text-white">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">Travel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuChinh">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuChinh">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Về chúng tôi</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tour trong nước</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tour nước ngoài</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Đăng nhập</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--  -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a href="#">Tour trong nước</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Đà Lạt Mộng Mơ - Nha Trang Biển Xanh</li>
+        </ol>
+    </nav>
+    <!--  -->
+    <div class="container">
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+                        <div class="preview-pic">
+                            <img src="./img/daLat/daLat1.png" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <h4 class="product-title">Đà Lạt Mộng Mơ - Nha Trang Biển Xanh</h4>
+                        <span class="review-no">41 đánh giá</span>
+                        <hr>
+                        <span>Khởi hành: 12-06-2018 (4 Ngày 3 Đêm)</span><br>
+                        <span>Nơi khởi hành: Đà Lạt</span>
+                        <hr>
+                        <h4 class="price"><span>1.800.000 VND</span><del>2.200.000 VND</del></h4>
+                        <span>(Số chỗ còn nhận: 10)</span><br>
+                        <button class="add-to-cart btn btn-default" type="button">Đặt tour ngay</button>
+                        <ul class="preview-thumbnail nav nav-tabs">
+                            <li><a><img src="./img/daLat/daLat1.png" onclick="handleClickPreImg('daLat1.png')" /></a>
+                            </li>
+                            <li><a><img src="./img/daLat/daLat2.png" onclick="handleClickPreImg('daLat2.png')" /></a>
+                            </li>
+                            <li><a><img src="./img/daLat/daLat3.png" onclick="handleClickPreImg('daLat3.png')" /></a>
+                            </li>
+                            <li><a><img src="./img/daLat/daLat4.png" onclick="handleClickPreImg('daLat4.png')" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="container detail-tour">
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="handleClickContent('tieu-chuan')" checked>
+            <label class="btn btn-outline-primary" for="btnradio1">Tiêu chuẩn</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="handleClickContent('chi-tiet-tour')">
+            <label class="btn btn-outline-primary" for="btnradio2">Chi tiết tour</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="handleClickContent('luu-y')">
+            <label class="btn btn-outline-primary" for="btnradio3">Lưu ý</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="handleClickContent('danh-gia')">
+            <label class="btn btn-outline-primary" for="btnradio4">Ý kiến khách hàng</label>
+        </div>
+        <div class="content">
+            <div class="ctn tieu-chuan">
+                <ul>
+                    <li>Đưa đón miễn phí</li>
+                    <li>Bảo hiểm an toàn</li>
+                    <li>Ăn uống miễn phí</li>
+                </ul>
+            </div>
+            <div class="ctn chi-tiet-tour hidden">
+                <p>
+                    Hãy cùng khám phá hành trình Siem Reap - Phnom Penh với những điểm tham quan nổi bật như Đền Baphuon kỳ bí, khám phá thành trì huyền thoại Angkor Wat, Angkor Thom, đền Ta Prohm khép mình bí ẩn dưới những cánh rừng già sâu thẳm và Hoàng Cung uy nghi tráng lệ trong kiến trúc Á Đông đằm thắm bên cạnh nét hiện đại, quyến rũ Tây Phương... <br><br>
+                    Chương trình tour: <br><br>                 
+                    Ngày 1 : TP. HỒ CHÍ MINH - MỘC BÀI - SIEM REAP (Ăn ba bữa)
+                </p>
+                <img src="https://bizweb.dktcdn.net/100/047/992/products/hq4--copy-.jpg?v=1452768944137" alt="" srcset="">
+                <p>Xe và hướng dẫn viên đón Quý khách tại 190 Pasteur, Q.3, TP.HCM, khởi hành đến cửa khẩu Mộc Bài. Ăn sáng trên đường. Đến Mộc Bài, Quý khách làm thủ tục qua cửa khẩu. Xe và hướng dẫn viên địa phương đón đoàn và đưa đi dùng bữa trưa tại nhà hàng địa phương . Sau đó, Quý khách tiếp tục lên đường đi Siem Reap. Đến nơi, Quý khách về nhận phòng tại khách sạn 4 sao  (tiêu chuẩn địa phương tại Campuchia). Ăn tối và tự do nghỉ ngơi.
+
+                    <br><br>Ngày 2 : SIEM REAP (Ăn ba bữa)</p>
+            </div>
+            <div class="ctn luu-y hidden">luu y</div>
+            <div class="ctn danh-gia hidden">danh gia</div>
+        </div>
+    </div>
+
+
+</body>
