@@ -3,6 +3,7 @@
     height: 52px;
     padding: 14px;
 }
+
 .breadcrumb-item a {
     color: #636363;
     text-decoration: none;
@@ -10,4 +11,9 @@
 
 .breadcrumb-item.active {
     color: #8dc700;
+}
+
+
+.no-scroll {
+    overflow: hidden;
 }

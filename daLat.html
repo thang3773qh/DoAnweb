@@ -69,7 +69,8 @@
                         <hr>
                         <h4 class="price"><span>1.800.000 VND</span><del>2.200.000 VND</del></h4>
                         <span>(Số chỗ còn nhận: 10)</span><br>
-                        <button class="add-to-cart btn btn-default" type="button">Đặt tour ngay</button>
+                        <button class="add-to-cart btn btn-default" type="button" onclick="handleClichOrder()">Đặt tour
+                            ngay</button>
                         <ul class="preview-thumbnail nav nav-tabs">
                             <li><a><img src="./img/daLat/daLat1.png" onclick="handleClickPreImg('daLat1.png')" /></a>
                             </li>
@@ -88,16 +89,20 @@
     <!--  -->
     <div class="container detail-tour">
         <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" onclick="handleClickContent('tieu-chuan')" checked>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                onclick="handleClickContent('tieu-chuan')" checked>
             <label class="btn btn-outline-primary" for="btnradio1">Tiêu chuẩn</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" onclick="handleClickContent('chi-tiet-tour')">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off"
+                onclick="handleClickContent('chi-tiet-tour')">
             <label class="btn btn-outline-primary" for="btnradio2">Chi tiết tour</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" onclick="handleClickContent('luu-y')">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"
+                onclick="handleClickContent('luu-y')">
             <label class="btn btn-outline-primary" for="btnradio3">Lưu ý</label>
 
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" onclick="handleClickContent('danh-gia')">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off"
+                onclick="handleClickContent('danh-gia')">
             <label class="btn btn-outline-primary" for="btnradio4">Ý kiến khách hàng</label>
         </div>
         <div class="content">
@@ -109,20 +114,279 @@
                 </ul>
             </div>
             <div class="ctn chi-tiet-tour hidden">
-                <p>
-                    Hãy cùng khám phá hành trình Siem Reap - Phnom Penh với những điểm tham quan nổi bật như Đền Baphuon kỳ bí, khám phá thành trì huyền thoại Angkor Wat, Angkor Thom, đền Ta Prohm khép mình bí ẩn dưới những cánh rừng già sâu thẳm và Hoàng Cung uy nghi tráng lệ trong kiến trúc Á Đông đằm thắm bên cạnh nét hiện đại, quyến rũ Tây Phương... <br><br>
-                    Chương trình tour: <br><br>                 
-                    Ngày 1 : TP. HỒ CHÍ MINH - MỘC BÀI - SIEM REAP (Ăn ba bữa)
-                </p>
-                <img src="https://bizweb.dktcdn.net/100/047/992/products/hq4--copy-.jpg?v=1452768944137" alt="" srcset="">
-                <p>Xe và hướng dẫn viên đón Quý khách tại 190 Pasteur, Q.3, TP.HCM, khởi hành đến cửa khẩu Mộc Bài. Ăn sáng trên đường. Đến Mộc Bài, Quý khách làm thủ tục qua cửa khẩu. Xe và hướng dẫn viên địa phương đón đoàn và đưa đi dùng bữa trưa tại nhà hàng địa phương . Sau đó, Quý khách tiếp tục lên đường đi Siem Reap. Đến nơi, Quý khách về nhận phòng tại khách sạn 4 sao  (tiêu chuẩn địa phương tại Campuchia). Ăn tối và tự do nghỉ ngơi.
 
-                    <br><br>Ngày 2 : SIEM REAP (Ăn ba bữa)</p>
+                <p>Hãy cùng khám phá hành trình Siem Reap - Phnom Penh với những điểm tham quan nổi bật như Đền
+                    Baphuon kỳ bí, khám phá thành trì huyền thoại Angkor Wat, Angkor Thom, đền Ta Prohm khép
+                    mình bí ẩn dưới những cánh rừng già sâu thẳm và Hoàng Cung uy nghi tráng lệ trong kiến trúc
+                    Á Đông đằm thắm bên cạnh nét hiện đại, quyến rũ Tây Phương...</p>
+                <p><u><strong>Chương trình tour:</strong></u></p>
+                <p><strong>Ngày 1 : TP. HỒ CHÍ MINH - MỘC BÀI - SIEM REAP (Ăn ba bữa)</strong></p>
+                <p style="text-align: center;"><img
+                        src="//bizweb.dktcdn.net/100/047/992/products/hq4--copy-.jpg?v=1452768944137"></p>
+                <p>Xe và hướng dẫn viên đón Quý khách tại 190 Pasteur, Q.3, TP.HCM, khởi hành đến cửa khẩu Mộc
+                    Bài. Ăn sáng trên đường. Đến Mộc Bài, Quý khách làm thủ tục qua cửa khẩu. Xe và hướng dẫn
+                    viên địa phương đón đoàn và đưa đi dùng bữa trưa tại nhà hàng địa phương . Sau đó, Quý khách
+                    tiếp tục lên đường đi Siem Reap. Đến nơi, Quý khách về nhận phòng tại khách sạn 4 sao
+                    &nbsp;(tiêu chuẩn địa phương tại Campuchia). Ăn tối và tự do nghỉ ngơi.</p>
+                <p><strong>Ngày 2 : SIEM REAP (Ăn ba bữa)</strong></p>
+                <p style="text-align: center;"><img
+                        src="//bizweb.dktcdn.net/100/047/992/products/53-copy--829e21fd-35d7-436b-b1b4-93f2a140baa5.jpg?v=1452768586973">
+                </p>
+                <p>Ăn sáng tại khách sạn. Quý khách tham quan Cổng nam Angkor Thom và Ta Prohm, đây là những
+                    cung điện lớn nhất với các mặt Phật được tạc trên đá cùng những phù điêu tuyệt đẹp, xe đưa
+                    Quý khách ngang qua Đền Bayon, Baphuon và Quảng trường đấu voi. Sau bữa trưa, Quý khách tham
+                    quan đền Angkor Wat - một trong những kỳ quan của thế giới, sau cùng Quý khách lên đồi
+                    Bakheng tham quan. Quý khách dùng bữa tối và thưởng thức chương trình ca múa nhạc truyền
+                    thống của người Khmer. Sau bữa tối, xe đưa Quý khách trở về khách sạn nghỉ ngơi.</p>
+                <p><strong>Ngày 3 : SIEM REAP - PHNOM PENH (Ăn ba bữa)</strong></p>
+                <p style="text-align: center;"><img
+                        src="//bizweb.dktcdn.net/100/047/992/products/21-copy--2a38958a-83db-4c5d-ba5f-2e8f1a3294d7.jpg?v=1452768224843">
+                </p>
+                <p>Ăn sáng tại khách sạn. Quý khách lên đường đến Phnom Penh - Thủ đô của Vương quốc Campuchia.
+                    Quý khách dùng bữa trưa tại nhà hàng địa phương ở Phnom Penh và nhận phòng tại khách sạn 4
+                    sao (tiêu chuẩn địa phương tại Campuchia). Buổi chiều, Quý khách đi tham quan Wat Phnom -
+                    Một ngôi chùa rất nổi tiếng tại thành phố Phnom Penh, tiếp tục tham quan Chùa Vàng, Chùa
+                    Bạc, và Hoàng Cung. Sau đó, Quý khách tự do tham quan và mua sắm tại City Jewelry. Sau bữa
+                    tối, Quý khách tham quan và tự do thử vận may tại Casino nổi tiếng của Campuchia.</p>
+                <p><strong>Ngày 4 : PHNOM PENH - MỘC BÀI - TP. HỒ CHÍ MINH (Ăn sáng, ăn trưa)</strong></p>
+                <p style="text-align: center;"><br>
+                    <img
+                        src="//bizweb.dktcdn.net/100/047/992/products/20-copy--cb9c2b7e-7531-46b9-b925-9ff4b3060e11.jpg?v=1452768182313">
+                </p>
+                <p>Ăn sáng tại khách sạn. Quý khách tự đo mua sắm tại Central Market. Sau đó khởi hành về cửa
+                    khẩu Mộc Bài. Ăn trưa tại địa phương. Đến cửa khẩu Mộc Bài sau khi làm thủ tục nhập cảnh
+                    Việt Nam, xe Vietravel đưa Quý khách về lại 190 Pasteur, Q.3, TP.HCM. Kết thúc chuyến tham
+                    quan.</p>
+                <p><u><strong>Chi tiết tour</strong></u></p>
+                <p style="text-align: center;"><strong><img
+                            src="//bizweb.dktcdn.net/100/047/992/files/chi-tiet-tuor.jpg?v=1452508012350"></strong>
+                </p>
+                <p><u><strong>Các điều kiện đăng ký tour:</strong></u></p>
+                <p>- Hộ chiếu của Quý khách phải còn thời hạn trên 6 tháng tính đến ngày về.&nbsp;<br>
+                    - Giá trẻ em áp dụng từ 2 tuổi cho đến dưới 12 tuổi.<br>
+                    - Khi đến đăng ký, Quý khách vui lòng mang hộ chiếu bản gốc và đóng 50% giá trị tour . Quý
+                    khách sẽ thanh toán hết trước 20 ngày khởi hành đối với tour Tết.<br>
+                    - Nếu yêu cầu ở phòng đơn, Quý khách vui lòng thanh toán tiền phụ thu.<br>
+                    - Trường hợp khách quốc tịch nước ngoài, phụ thu phí visa Campuchia 770.000 VNĐ/khách và nộp
+                    2 hình (4*6). Và nếu khách có visa Viet Nam một lần (single entries) thì phụ phí làm visa
+                    tái nhập Việt Nam 1.480.000 VNĐ/khách và nộp 1 hình (4*6). Trường hợp khách phải làm visa
+                    tái nhập Việt Nam tại cửa khẩu hoặc sân bay thì phụ phí 1.100.000 VN/ khách và nộp 1 hình
+                    (4*6).<br>
+                    - Quý khách mang 2 Quốc tịch hoặc Travel document (chưa nhập quốc tịch) vui lòng thông báo
+                    với nhân viên bán tour ngay thời điểm đăng ký tour và nộp bản gốc kèm các giấy tờ có liên
+                    quan (nếu có).&nbsp;<br>
+                    - Quý khách chỉ mang thẻ xanh (thẻ tạm trú tại nước ngoài) và không còn hộ chiếu VN còn hiệu
+                    lực thì không đăng ký du lịch sang nước thứ ba được.<br>
+                    - Quý khách dưới 16 tuổi phải có Bố Mẹ hoặc người nhà trên 16 tuổi đi cùng. Trường hợp đi
+                    với người nhà phải nộp kèm giấy ủy quyền được chính quyền địa phương xác nhận (do Bố Mẹ ủy
+                    quyền dắt đi tour)<br>
+                    -Vietravel không chịu trách nhiệm nếu Quý khách bị từ chối nhập cảnh.<br>
+                    Giá tour bao gồm:</p>
+                <p>- Khách sạn (phòng hai người).</p>
+                <p>- Ăn uống, tham quan và vận chuyển như chương trình.</p>
+                <p>- Hướng dẫn viên suốt tuyến.</p>
+                <p>- Bảo hiểm du lịch.</p>
+                <p>Đặc biệt,Vietravel tặng thêm cho mỗi du khách phí Bảo hiểm du lịch với mức bồi thường tối đa
+                    là 210.000.000 VNĐ cho nhân mạng và 21.000.000 VNĐ cho hành lý.</p>
+                <p>Giá tour không bao gồm:</p>
+                <p>- Hộ chiếu.</p>
+                <p>- Nước uống (bia rượu trong bữa ăn), điện thoại, giặt ủi, hành lý quá cước theo quy định của
+                    hàng không.</p>
+                <p>- Thuốc men, bệnh viện… và chi phí cá nhân của khách ngoài chương trình.</p>
+                <p>Tiền bồi dưỡng:</p>
+                <p>- Tiền bồi dưỡng cho hướng dẫn viên và tài xế địa phương (70.000 VND/khách/ngày).</p>
+                <p>Quà tặng Vietravel</p>
+                <p>Giá tour trẻ em:</p>
+                <p>- &nbsp; Trẻ em dưới 2 tuổi: 30% giá tour người lớn (không có chế độ giường riêng).</p>
+                <p>- &nbsp; Trẻ em từ trên 2 tuổi đến dưới 12 tuổi: 75% giá tour người lớn (không có chế độ
+                    giường riêng).</p>
+                <p>- &nbsp; Trẻ em từ trên 2 tuổi đến dưới 12 tuổi: 90% giá tour người lớn (có chế độ giường
+                    riêng).</p>
+                <p>- &nbsp; &nbsp;Trẻ em từ 12 tuổi trở lên: 100% giá tour người lớn..</p>
+                <p>Lưu ý: Trong trường hợp chỉ có 1 khách (người lớn) đi với 1 trẻ em dưới 12 tuổi (không có chế
+                    độ giường riêng), Quý khách vui lòng thanh toán thêm để bé có chế độ giường riêng.</p>
+                <p>Các điều kiện huỷ tour: (đối với ngày thường):</p>
+                <p>- Nếu hủy hoặc chuyển sang các tuyến du lịch khác trước ngày khởi &nbsp;hành 20: Không mất
+                    chi phí.</p>
+                <p>- Nếu hủy hoặc chuyển sang các chuyến du lịch khác từ 15-19 ngày trước ngày khởi hành: Chi
+                    phí chuyển/huỷ tour là 50% tiền cọc tour.</p>
+                <p>- Nếu hủy hoặc chuyển sang các chuyến du lịch khác từ 12-14 ngày trước ngày khởi: Chi phí
+                    chuyển/huỷ tour là 100% tiền cọc tour.</p>
+                <p>- Nếu hủy chuyến du lịch ngay sau khi Đại Sứ Quán, Lãnh Sự Quán đã cấp visa: Chi phí huỷ tour
+                    là 100% tiền cọc tour.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng từ &nbsp;08-11 ngày trước ngày khởi hành: Chi phí huỷ
+                    tour là 50% trên giá tour du lịch.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng từ &nbsp;05-07 ngày trước ngày khởi hành: Chi phí huỷ
+                    tour là 70% trên giá tour du lịch.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng từ &nbsp;02-04 ngày trước ngày khởi hành: Chi phí huỷ
+                    tour là 90% trên giá vé du lịch.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng 1 &nbsp;ngày trước ngày khởi hành: Chi phí huỷ tour là
+                    100% trên giá vé du lịch.</p>
+                <p>&nbsp;- Thời gian hủy tour được tính cho ngày làm việc, không tính thứ bảy và chủ nhật.</p>
+                <p>* Các tour ngày lễ, tết là các tour có thời gian diễn ra rơi vào một trong các ngày lễ, tết
+                    theo qui định.</p>
+                <p>Các điều kiện huỷ tour: (đối với ngày lễ, Tết)</p>
+                <p>- Nếu hủy hoặc chuyển sang các tuyến du lịch khác trước ngày khởi &nbsp;hành 30 ngày: Không
+                    mất chi phí.</p>
+                <p>- Nếu hủy hoặc chuyển sang các chuyến du lịch khác từ 25-29 ngày trước ngày khởi hành: Chi
+                    phí chuyển/huỷ tour là 50% tiền cọc tour.</p>
+                <p>- Nếu hủy hoặc chuyển sang các chuyến du lịch khác từ 20-24 ngày trước ngày khởi hành: Chi
+                    phí chuyển/huỷ tour là 100% tiền cọc tour.</p>
+                <p>- Nếu hủy chuyến du lịch ngay sau khi Đại Sứ Quán, Lãnh Sự Quán đã cấp visa: Chi phí huỷ tour
+                    là 100% tiền cọc tour.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng từ 17-19 ngày trước ngày khởi hành: Chi phí huỷ tour là
+                    50% trên giá tour du lịch.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng từ 08-16 ngày trước ngày khởi: Chi phí huỷ tour là 70%
+                    trên giá tour du lịch.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng từ 02-07 ngày trước ngày khởi: Chi phí huỷ tour là 90%
+                    trên giá vé du lịch.</p>
+                <p>- Nếu hủy chuyến du lịch trong vòng 1 &nbsp;ngày trước ngày khởi hành: Chi phí huỷ tour là
+                    100% trên giá vé du lịch.</p>
+                <p>* Thời gian hủy tour được tính cho ngày làm việc, không tính thứ bảy, chủ nhật và các ngày
+                    Lễ, Tết.</p>
+                <p>***Lưu ý khi chuyển/huỷ tour:</p>
+                <p>- Sau khi đóng tiền, nếu Quý khách muốn chuyển/huỷ tour xin vui lòng mang Vé Du Lịch đến văn
+                    phòng đăng ký tour để làm thủ tục chuyển/huỷ tour và chịu chi phí theo quy định của
+                    Vietravel. Không giải quyết các trường hợp liên hệ chuyển/huỷ tour qua điện thoại.</p>
+                <p>- Đối với những tour còn thời hạn hủy nhưng đã làm visa, Quý khách vui lòng thanh toán phí
+                    visa.</p>
+                <p>Lưu ý:&nbsp;</p>
+                <p>- &nbsp;Khi đăng ký tour du lịch, Quý khách vui lòng đọc kỹ chương trình, giá tour, các khoản
+                    bao gồm cũng như không &nbsp;bao gồm trong chương trình, các điều kiện hủy tour trên biên
+                    nhận đóng tiền. Trong trường hợp Quý khách không trực tiếp đến đăng ký tour mà do người khác
+                    đến đăng ký thì Quý khách vui lòng tìm hiểu kỹ chương trình từ người đăng ký cho mình.</p>
+                <p>- &nbsp;Quý khách từ 70 tuổi đến dưới 75 tuổi &nbsp;yêu cầu ký cam kết sức khỏe với Công ty.
+                </p>
+                <p>- &nbsp;Quý khách từ 75 tuổi trở lên yêu cầu phải có giấy xác nhận đầy đủ sức khoẻ để đi du
+                    lịch nước ngoài của bác sĩ + giấy cam kết sức khỏe với Công ty và phải có người thân dưới 60
+                    tuổi (đầy đủ sức khoẻ) đi theo. Ngoài ra, khách trên 75 tuổi vui lòng đóng thêm phí bảo hiểm
+                    cao cấp (phí thay đổi tùy theo tour).</p>
+                <p>- &nbsp;Không nhận khách từ 80 tuổi trở lên.</p>
+                <p>- &nbsp;Không nhận khách có thai từ 5 tháng trở lên tham gia các tour du lịch nước ngoài vì
+                    lí do an toàn cho khách.</p>
+                <p>- &nbsp;Do các chuyến bay phụ thuộc vào các hãng Hàng Không nên trong một số trường hợp giờ
+                    bay có thể thay đổi mà không được báo trước.</p>
+                <p>- &nbsp;Tùy vào tình hình thực tế, thứ tự các điểm tham quan trong chương trình có thể thay
+                    đổi nhưng vẫn đảm bảo đầy đủ các điểm tham quan như lúc đầu.</p>
+                <p>- Vietravel sẽ không chịu trách nhiệm bảo đảm các điểm tham quan trong trường hợp:</p>
+                <p>+ Xảy ra thiên tai: bão lụt, hạn hán, động đất…</p>
+                <p>+ Sự cố về an ninh: khủng bố, biểu tình.</p>
+                <p>+ Sự cố về hàng không: trục trặc kỹ thuật, an ninh, dời, hủy, hoãn chuyến bay.</p>
+                <p>Nếu những trường hợp trên xảy ra, Vietravel sẽ xem xét để hoàn trả chi phí không tham quan
+                    cho khách trong điều kiện có thể(sau khi đã trừ lại các dịch vụ đã thực hiện như phí làm
+                    visa…và không chịu trách nhiệm bồi thường thêm bất kỳ chi phí nào khác).</p>
+                <p>KÍNH CHÚC QUÝ KHÁCH MỘT CHUYẾN DU LỊCH VUI VẺ &amp; BỔ ÍCH!!</p>
+                <p><u><strong>Thông tin liên hệ:</strong></u></p>
+                <p>Văn phòng Hà Nội: 43 Trần Hưng Đạo, Quận Hoàn Kiếm, Hà Nội</p>
+                <p>Văn phòng Hồ Chí Minh: 67 Phan Đăng Lưu, Quận Phú Nhuận, Hồ Chí Minh</p>
+                <p>Văn phòng Đà Nẵng: 67 Lê Văn Thọ, Quận 1, Đà Nẵng</p>
+                <p><strong><u>TÓM TẮT THÔNG TIN CHI TIẾT:</u></strong></p>
+                <table width="100%">
+                    <tbody>
+                        <tr>
+                            <td>Mã Tour</td>
+                            <td>EGN-TNN101</td>
+                        </tr>
+                        <tr>
+                            <td>Tên Tour</td>
+                            <td>Du lịch Siem Riep-Phnom Penh</td>
+                        </tr>
+                        <tr>
+                            <td>Thời gian</td>
+                            <td>4 ngày</td>
+                        </tr>
+                        <tr>
+                            <td>Khời ngày</td>
+                            <td>23/01/2015</td>
+                        </tr>
+                        <tr>
+                            <td>Nơi khỏi hàng</td>
+                            <td>TP Hồ Chí Minh</td>
+                        </tr>
+                        <tr>
+                            <td>Số chỗ</td>
+                            <td>45 chỗ</td>
+                        </tr>
+                        <tr>
+                            <td>Hotline</td>
+                            <td>0909 000 000</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="ctn luu-y hidden">luu y</div>
             <div class="ctn danh-gia hidden">danh gia</div>
         </div>
+
+
     </div>
+    <div class="row footer p-5">
+        <div class="col-md-3">
+            <b>
+                <h1>TRAVEL</h1>
+            </b>
+            <p>Trường đại học Vinh</p>
+            <p>0123456789</p>
+            <p>example@mail.com</p>
+        </div>
+        <div class="col-md-3">
+            <h2>Dịch vụ của chúng tôi</h2>
+            <a href="">Về chúng tôi</a><br>
+            <a href="">Tour trong nước</a><br>
+            <a href="">Tour nước ngoài</a><br>
+            <a href="">Tin tức</a><br>
+            <a href="">Liên hệ</a><br>
+        </div>
+        <div class="col-md-3">
+            <h2>Về chúng tôi</h2>
+            <a href="">Về chúng tôi</a><br>
+            <a href="">Tour trong nước</a><br>
+            <a href="">Tour nước ngoài</a><br>
+            <a href="">Tin tức</a><br>
+            <a href="">Liên hệ</a><br>
+        </div>
+        <div class="col-md-3">
+            <h2>Hỗ trợ khách hàng</h2>
+            <a href="">Về chúng tôi</a><br>
+            <a href="">Tour trong nước</a><br>
+            <a href="">Tour nước ngoài</a><br>
+            <a href="">Tin tức</a><br>
+            <a href="">Liên hệ</a><br>
+        </div>
+    </div>
+
+    <div class="form-dat-tour hidden">
+        <div class="form">
+            <h1>Liên hệ đặt tour</h1>
+            <p>Nhập liên hệ và tin nhắn của bạn cho chúng tôi</p>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Họ và tên">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Số điện thoại">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="EmailEmail">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Số người">
+                        </div>
+                    </div>
+                    <div class="col pb-3">
+                            <textarea class="form-control" placeholder="Nội dung"
+                                id="floatingTextarea" style="height: 100%;"></textarea>
+                    </div>
+                </div>
+                <div class="butt"><button type="submit" class="btn btn-primary" onclick="handleClichMask()">Gửi ngay</button></div>
+            </form>
+        </div>
+        <div class="mask" onclick="handleClichMask()"></div>
+
+    </div>
+
 
 
 </body>
